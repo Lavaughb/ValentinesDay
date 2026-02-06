@@ -6,16 +6,16 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',      // Required for GitHub Pages
+  output: 'export',
   images: {
-    unoptimized: true,   // Required for GitHub Pages static export
+    unoptimized: true,
   },
   reactStrictMode: false,
   experimental: {
     optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
   },
-  // If your GitHub repo name is "ValentinesDay", uncomment the line below:
-  // basePath: '/ValentinesDay', 
+  // Since your repo is 'ValentinesDay', we must add this for GitHub Pages
+  basePath: '/ValentinesDay', 
 };
 
 export default withBundleAnalyzer(nextConfig);
