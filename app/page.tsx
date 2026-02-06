@@ -90,7 +90,7 @@ export default function ValentinesDay() {
               <Stack align="center" gap="xl">
                 <Heart size={100} fill="#b01a1a" color="#b01a1a" className="animate-pulse" />
                 <Title order={1} ta="center" c="red.9" style={{ fontSize: '3.5rem', fontWeight: 900 }}>
-                  I love you, Emma! ❤️
+                  I LOVE YOU EMMA! ❤️
                 </Title>
                 
                 <Button 
