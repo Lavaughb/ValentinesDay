@@ -12,24 +12,26 @@ export default function ValentinesDay() {
   const [mounted, setMounted] = useState(false);
 
   // Hardcoded image list for Static Export (GitHub Pages compatibility)
-  const imageUrls = [
-    '/img/999D55B9-CC1B-44E0-97F3-2F631A353AF8.jpg',
-    '/img/3750416958892590058.jpg',
-    '/img/FullSizeRender.jpg',
-    '/img/FullSizeRender(1).jpg',
-    '/img/IMG_1710.JPG',
-    '/img/IMG_2007.jpg',
-    '/img/IMG_2405.jpg',
-    '/img/IMG_3035.jpg',
-    '/img/IMG_4005.jpg',
-    '/img/IMG_4088.jpg',
-    '/img/IMG_4305.jpg',
-    '/img/IMG_4786.jpg',
-    '/img/IMG_4950.jpg',
-    '/img/PXL_20250206_005144501.MP.jpg',
-    '/img/PXL_20250224_173819619.MP.jpg',
-    '/img/PXL_20250711_195929173.MP.jpg'
-  ];
+  const repoName = '/ValentinesDay'; // Must match your repo name exactly
+
+const imageUrls = [
+  `${repoName}/img/999D55B9-CC1B-44E0-97F3-2F631A353AF8.jpg`,
+  `${repoName}/img/3750416958892590058.jpg`,
+  `${repoName}/img/FullSizeRender.jpg`,
+  `${repoName}/img/FullSizeRender(1).jpg`,
+  `${repoName}/img/IMG_1710.JPG`,
+  `${repoName}/img/IMG_2007.jpg`,
+  `${repoName}/img/IMG_2405.jpg`,
+  `${repoName}/img/IMG_3035.jpg`,
+  `${repoName}/img/IMG_4005.jpg`,
+  `${repoName}/img/IMG_4088.jpg`,
+  `${repoName}/img/IMG_4305.jpg`,
+  `${repoName}/img/IMG_4786.jpg`,
+  `${repoName}/img/IMG_4950.jpg`,
+  `${repoName}/img/PXL_20250206_005144501.MP.jpg`,
+  `${repoName}/img/PXL_20250224_173819619.MP.jpg`,
+  `${repoName}/img/PXL_20250711_195929173.MP.jpg`
+];
 
   useEffect(() => {
     setMounted(true);
