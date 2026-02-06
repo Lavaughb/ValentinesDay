@@ -1,4 +1,5 @@
 import '@mantine/core/styles.css';
+import './globals.css'; // Add this line!
 
 import React from 'react';
 import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';

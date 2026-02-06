@@ -1,0 +1,71 @@
+@import '@mantine/core/styles.css';
+
+:root {
+  --bg-pink: #fff0f6;
+  --heart-red: #b01a1a;
+}
+
+body {
+  background-color: var(--bg-pink) !important; /* Force the light pink */
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.bg-heart {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background-color: var(--heart-red);
+  transform: translate(-50%, -50%) rotate(-45deg);
+  opacity: 0.25; /* Lightened slightly for better collage visibility */
+  z-index: -1;
+  animation: heartbeat 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+  pointer-events: none;
+}
+
+.bg-heart::before, .bg-heart::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-color: var(--heart-red);
+  border-radius: 50%;
+}
+.bg-heart::before { top: -150px; left: 0; }
+.bg-heart::after { left: 150px; top: 0; }
+
+@keyframes heartbeat {
+  0% { transform: translate(-50%, -50%) rotate(-45deg) scale(0.8); }
+  5% { transform: translate(-50%, -50%) rotate(-45deg) scale(2.2); }
+  15% { transform: translate(-50%, -50%) rotate(-45deg) scale(2.8); }
+  50% { transform: translate(-50%, -50%) rotate(-45deg) scale(0.8); }
+  100% { transform: translate(-50%, -50%) rotate(-45deg) scale(0.8); }
+}
+
+.collage-container {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.collage-item {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  animation: float-collage 6s infinite ease-in-out;
+}
+
+@keyframes float-collage {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
